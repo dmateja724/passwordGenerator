@@ -13,10 +13,25 @@ var getRandomNumber = function(max) {
 
 var generatePassword = function() {
     $("password").value = ""; // clear previous entry
-    
+    var passChar = "";
+    var pass = "";
     var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-+!@";
+    var i = 0;
     
     
+    if (isNaN($("num").value)) {
+        alert("Please enter a valid number.");
+        $("num").value = "";
+        $("num").focus();
+    } 
+    
+    while (i < $("num").value) {
+        i++;
+        var random = getRandomNumber(chars.length);
+        passChar = chars[random];
+        pass += passChar;
+    }
+    $("password").value = pass;
 };
 
 var clearFields = function() {
