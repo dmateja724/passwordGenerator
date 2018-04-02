@@ -32,7 +32,7 @@ var generatePassword = function() {
     // loop that grabs random characters and builds the password
     while (i < $("num").value) {
         i++;
-        var random = getRandomNumber(chars.length);
+        var random = getRandomNumber(chars.length - 1);
         passChar = chars[random];
         pass += passChar;
     }
