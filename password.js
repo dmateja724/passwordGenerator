@@ -3,6 +3,7 @@ var $ = function(id) {
     return document.getElementById(id); 
 };
 
+// generates a random number to be associated with a character position in "chars"
 var getRandomNumber = function(max) {
     var random;
     if (!isNaN(max)) {
@@ -16,11 +17,10 @@ var getRandomNumber = function(max) {
 
 // gives functionality to "get password" button 
 var generatePassword = function() {
-    $("password").value = "";       // clear previous entry
     var passChar = "";             // single random character variable
     var pass = "";                // generated password container
     var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-+!@"; // pool of characters to be chosen 
-    var i = 0;
+    var i = 0;                  // counter variable
     
     // validation for a numeric entry
     if (isNaN($("num").value)) {
