@@ -23,7 +23,7 @@ var generatePassword = function() {
     var i = 0;                  // counter variable
     
     // validation for a numeric entry
-    if (isNaN($("num").value)) {
+    if (isNaN($("num").value) || ($("num").value == "")) {
         alert("Please enter a valid number.");
         $("num").value = "";
         $("num").focus();
